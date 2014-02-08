@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html manifest="xtasy.appcache">
+  <head>
+    <title>Xtasy-2k14</title>
+	<meta char="utf-8"/>
+	<link rel="shortcut icon" type="images/png" href="images/icon.png"/>
+	<style>
+	   @font-face{font-family: prime;src: url("style/Prime Regular.otf");}
+	   div#window1{position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;z-index: 100; background-color: black}
+	   canvas{position: relative;width: 300px; height: 300px;background-color: transparent;}
+	   div#rotate_outer{position: relative; top: 100px; width: 300px; height: 300px; border-radius: 300px; background-color: grey; overflow: hidden; box-shadow:inset 0.1px 0.1px 12px black;}
+	   div#inner{position: absolute; top: 21px; left: 21px; width:258px; height: 258px; background-color: black;border-radius: 258px; box-shadow: 0.1px 0.1px 12px black;}
+	   div#percent{position: relative; top: 74px; width: 100px; height: 100px; background-color :transparent; text-align: center; font-family: prime; font-size: 33px; color: white;}
+	</style>
+	<link rel="stylesheet" type="text/css" href="style/index.css"/>
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+  </head>
+  
+  <body  style="background-image: url('images/backbg.jpg');">
+    <!--<div id="window1">
+		  
+	  <center>
+	   <div id="rotate_outer">
+	     <canvas id="canv" width="300px" height="300px"></canvas>
+	     <div id="inner">
+		  <center>
+		   <div id="percent">
+		   </div>
+		  </center>
+		 </div>
+		 
+	   </div>
+	  </center>
+	  <div id="loadinglogo" style="position: absolute; right: 20px; top: 20px; width: 300px; height: 300px;background-size: 100% 100%; background-image:url('images/loadpageico.png');">
+	  </div>
+	</div>
+	<script>
+		    var canvas=document.getElementById("canv");
+			var context=canvas.getContext("2d");
+			var radius=130;
+			var originx=canvas.width/2;
+			var originy=canvas.height/2;
+			var startangle=1.5*Math.PI;
+			var counterclockwise=false;
+			var endangle=1.6;
+			var parcent=0;
+			var a=setInterval(
+			  function()
+			  { 
+			    if(endangle>=2 && endangle<=2.1)
+				{
+				 parcent=25;
+				}
+				if(endangle>=2.5 && endangle<=2.6)
+				{
+				 parcent=50;
+				}
+				if(endangle>=3 && endangle<=3.1)
+				{
+				 parcent=75;
+				}
+				if(endangle>=3.5)
+				{
+				 parcent=100;
+				 setTimeout(
+				   function()
+				   {
+				    document.getElementById("window1").style.visibility="hidden";
+				   }
+				 ,100);
+				}
+				document.getElementById("percent").innerHTML=parcent+"%";
+			    context.beginPath();
+			    context.arc(originx, originy, radius, startangle, endangle*Math.PI, counterclockwise);
+			    context.lineWidth = 40;
+			   context.strokeStyle = '#008B8B';
+               context.stroke();
+			   endangle=endangle+0.0222;
+			   parcent1=parcent+1.22;
+			   parcent=Math.round(parcent1);
+			   if(endangle>=3.51)
+			   {
+			    clearInterval(a);
+				a=null;
+			   }
+			  }
+			,500);
+	</script>-->
+    <div id="window">
+<!------------------------------------------------------------------------HEADER-------------------------------------------------------------------->
+      <div id="heading" style="background-image: url('images/blackbg.png');z-index: 6;">
+	    <div id="logo" style="background-image: url('images/logo.png');"></div>
+		<div id="nav">
+		 <ul>
+		   <li id="shed">
+		     <a href="#">
+		       <div class="links" id="gen_shed">
+			     <img src="images/buttback.png" class="nav_back"/>
+			     <img src="images/schedule.png " class="nav_button"/>
+			  </div>
+			  <script type="text/javascript">
+			  $("#gen_shed").click(
+			    function()
+				{
+				 $("#shed_layer").css({"visibility":"visible"});
+				}
+			  );
+			 </script>
+		    </a>
+		  </li>
+		  <li id="regi">
+		   <a href="#">
+		     <div class="links">
+			    <img src="images/buttback.png" class="nav_back"/>
+		        <img src="images/register.png" class="nav_button"/>
+			 </div>
+		   </a>
+		  </li>
+		  <li  id="spon">
+		    <a href="#">
+		      <div class="links" id="gen_spon">
+			    <img src="images/buttback.png" class="nav_back"/>
+			     <img src="images/sponsors.png" class="nav_button"/>
+			  </div>
+			  <script type="text/javascript">
+			  $("#gen_spon").click(
+			    function()
+				{
+				 $("#spon_layer").css({"visibility":"visible"});
+				}
+			  );
+			 </script>
+		    </a>
+		  </li>
+		  <li>
+		  <a href="#"  id="contact" style="background-color: yellow;">
+		     <div  class="links" id="gen_contact">
+			    <img src="images/buttback.png" class="nav_back"/>
+			    <img src="images/contact.png" class="nav_button"/>
+			 </div>
+			 <script type="text/javascript">
+			  $("#gen_contact").click(
+			    function()
+				{
+				 $("#layer").css({"visibility":"visible"});
+				}
+			  );
+			 </script>
+		  </a>
+		  </li>
+		  </ul>
+		</div>
+	  </div>
+	      <div id="layer" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; background-color: black; opacity: 0.9; z-index:90; color: white; font-family: prime; font-size: 18px; visibility: hidden;">
+		   <div id="gen_cont_close" style="position: absolute; top: 10px; right: 10px; background-image: url('images/smallclose.png'); width: 18px; height: 18px; cursor: pointer;" ></div>
+		    <script type="text/javascript">
+			  $("#gen_cont_close").click(
+			   function()
+			   {
+			     $("#layer").css({"visibility":"hidden"});
+			   }
+			  );
+			</script>
+			
+		   <center>
+		   <div id="contact_show" style="position: relative; top: 60px; width: 700px; height: 600px; background-color: transparent;">
+		      <div id="sec_1" style="position: absolute; top: 10px; left: 10px; width: 300px; height: 100px; border: black 1px solid;text-align: left;">
+			    Amrit Das<br/>(Cultural Secretary)<br/>
+			    8895042244<br/>
+				<u>amritdas@xtasy2k14.com</u>
+			  </div>
+			  <div id="sec_2" style="position: absolute; top: 10px; right: 10px; width: 300px; height: 100px; text-align: left;">
+			    Mohit Tirkey<br/>Literary Secretary)<br/>
+			    9439083272<br/>
+				<u>mohittirkey@xtasy2k14.com</u>
+			  </div>
+			  <div id="sec_3" style="position: relative; top: 130px; width: 300px; height: 100px; text-align: left;">
+			   Ashish Sarangi<br/>(Technical Secretary)<br/>
+			    8093572769<br/>
+				<u>ashishsarangi@xtasy2k14.com</u>
+			  </div>
+			  <div id="sec_4" style="position: absolute; top: 270px; left: 10px; width: 300px; height: 100px; text-align: left;">
+			   Sanjay Hansdah<br/>(Dramatics Secretary)<br/>
+			    8763997849<br/>
+				<u>sanjayhansdah@xtasy2k14.com</u>
+			  </div>
+			  <div id="sec_5" style="position: absolute; top: 270px; right:10px;width: 300px; height: 100px;text-align: left;">
+			   Punyasloka Das<br/>(NSS Secretary)<br/>
+			    8895593796<br/>
+				<u>punyaslokadas@xtasy2k14.com</u>
+			  </div>
+			  <div id="sec_6" style="position: relative; top: 320px; width: 300px; height: 100px; text-align: left;">
+			   Debabrata Pati<br/>(Chief Co-Ordinator)<br/>
+			    9438559971<br/>
+				<u>debabratapati@xtasy2k14.com</u>
+			  </div>
+			  
+		   </div>
+		   </center>
+		   </div>
+		   <div id="spon_layer" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; background-color: black; opacity: 0.9; z-index:90; color: white; font-family: prime; font-size: 18px; visibility: hidden;">
+		   <div id="spon_close" style="position: absolute; top: 10px; right: 10px; background-image: url('images/smallclose.png'); width: 18px; height: 18px; cursor: pointer;" ></div>
+		    <script type="text/javascript">
+			  $("#spon_close").click(
+			   function()
+			   {
+			     $("#spon_layer").css({"visibility":"hidden"});
+			   }
+			  );
+			</script>
+		   <center>
+		   <div id="spon_show" style="position: relative; top: 60px; width: 700px; height: 600px; background-color: transparent;">
+		     Sponser List will available soon.....
+		   </div>
+		   </center>
+		  </div> 
+		   <div id="shed_layer" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; background-color: black; opacity: 0.9; z-index:90; color: white; font-family: prime; font-size: 18px; visibility: hidden;">
+		   <div id="shed_close" style="position: absolute; top: 10px; right: 10px; background-image: url('images/smallclose.png'); width: 18px; height: 18px; cursor: pointer;" ></div>
+		    <script type="text/javascript">
+			  $("#shed_close").click(
+			   function()
+			   {
+			     $("#shed_layer").css({"visibility":"hidden"});
+			   }
+			  );
+			</script>
+			
+		   <center>
+		   
+		   <div id="shed_show" style="position: relative; top: 60px; width: 700px; height: 600px; background-color: transparent;">
+		     Schedule will be available soon...
+		
+
+		   </div>
+		   </center>
+		   </div>
+		   
+		
+	   
+<!----------------------------------------------------------------------MIDDLE---------------------------------------------------------------------->
+      <center style="z-index:2;">
+         <div id="content">
+		    <div id="event_container">
+			  <center>
+			    <!----------------------------------ART AND MEDIA------------------------>
+			     <div id="art" class="cat_name">
+				    <img src="images/artnmedia.jpg" id="artbg1" class="eventbg"/>
+					<img src="images/artnmedia.png" id="arttext" class="eventbg" style="opacity: 0.8;"/>
+					<img src="images/backbro.png" class="transback"/>
+					
+					<div id="cult_close" class="close" style="background-image:url('images/close-buttonwhite.png');">
+					  <div id="red_close" style="background-image:url('images/close-buttonred.png');"></div>
+					</div>
+				 </div>
+				<!----------------------------------CULTURAL---------------------------->
+				 <div id="cult" class="cat_name">
+				    <img src="images/cultural.jpg" id="cultbg1" class="eventbg"/>
+					<img src="images/cultural.png" id="culttext" class="eventbg" style="opacity: 0.8;"/>
+					<img src="images/backbro.png" class="transback"/>
+					<div id="cult_events_left" class="cult_events">
+					  <div id="cult_left_solo" class="cult_left_circle">solodance</div>
+					  <div id="cult_left_duet" class="cult_left_circle">duet dance</div>
+					  <div id="cult_left_group" class="cult_left_circle">group dance</div>
+					</div>
+					<div id="cult_events_right" class="cult_events">
+					  <div id="cult_right_fashion" class="cult_right_circle">fashion parade</div>
+					  <div id="cult_right_sing" class="cult_right_circle">singing competion</div>
+					  <div id="cult_right_band" class="cult_right_circle">band war</div>
+					</div>
+					<div id="cult_about"></div>
+					<div id="cult_close" class="close" style="background-image:url('images/close-buttonwhite.png');">
+					  <div id="red_close" style="background-image:url('images/close-buttonred.png');"></div>
+					</div>
+				 </div>
+				 <!-------------------------------LITERARY----------------------------->
+				 <div id="lit" class="cat_name">
+				    <img src="images/literary.jpg" id="litbg1" class="eventbg"/>
+					<img src="images/literary.png" id="littext" class="eventbg" style="opacity: 0.8;"/>
+					<img src="images/backbro.png" class="transback"/>
+					<div id="lit_events_left" class="lit_events">
+					  <div id="lit_left_word" class="lit_left_circle">Wordsworth</div>
+					  <div id="lit_left_ala" class="lit_left_circle">alacrity</div>
+					</div>
+					<div id="lit_events_right" class="lit_events">
+					  <div id="lit_right_wart" class="lit_right_circle">artalaap</div>
+					  <div id="lit_right_broad" class="lit_right_circle">Broadcast</div>
+					</div>
+					<div id="lit_close" class="close" style="background-image:url('images/close-buttonwhite.png');">
+					  <div id="red_close" style="background-image:url('images/close-buttonred.png');"></div>
+					</div>
+				 </div>
+				 <!---------------------------------GAME-------------------------------->
+				 <div id="game" class="cat_name">
+				    <img src="images/gaming.jpg" id="gamebg1" class="eventbg"/>
+					<img src="images/gaming.png" id="gametext" class="eventbg" style="opacity: 1;"/>
+					<img src="images/backbro.png" class="transback"/>
+					<div id="game_events_left" class="game_events">
+					  <div id="game_left_cs" class="game_left_circle" style="background-image:url('images/counterstrike.png'); opacity: 1;"></div>
+					  <div id="game_left_aoe" class="game_left_circle" style="background-image:url('images/aoe.png'); opacity: 1;"></div>
+					</div>
+					<div id="game_events_right" class="game_events">
+					  <div id="game_right_nfs" class="game_right_circle" style="background-image:url('images/nfs.png'); opacity: 1;"></div>
+					  <div id="game_right_fifa" class="game_right_circle" style="background-image:url('images/FIFA.png'); opacity: 1;"></div>
+					</div>
+					<div id="game_close" class="close" style="background-image:url('images/close-buttonwhite.png');">
+					  <div id="red_close" style="background-image:url('images/close-buttonred.png');"></div>
+					</div>
+					 <div id="about_game">
+					    This year game is back with many events.
+					 </div>
+					 <!--Counter Strike---->
+					 <div id="game_cs">
+					    <div id="about_cs" style="text-align: center;">
+						 Xtasy Brings The platform, where odisha's top CS players Play together.<br/>
+						</div>
+						<div id="cs_rules" style="text-align: left;">
+					       <div id="cs_rule_1" style=" position: absolute;">
+						     <b style="color: rgb(27,54,54);">Game Version : </b>Counter Strike Non Steam<br/>
+                             <b style="color: rgb(27,54,54);"> Game Format :</b> 5 vs 5 Knockout Tournament.<br/>
+                             <b style="color: rgb(27,54,54);">Map Pool:</b> de_dust2, de_inferno, de_nuke,de_train<br/>
+                             Till Quarterfinals map will be decided by a coin toss and in Semifinals and Final map will be  chosen through map elimination rule.<br/>
+                             <b style="color: rgb(27,54,54);"> Game Format :</b> 5 vs 5 Knockout Tournament.<br/>
+						   </div>
+						   <div id="cs_rule_2" style="position: absolute;">
+						      <b style="color: rgb(27,54,54);">Map Pool:</b> de_dust2, de_inferno, de_nuke,de_train<br/>
+                             Till Quarterfinals map will be decided by a coin toss and in Semifinals and Final map will be  chosen through map elimination rule.<br/>
+						     <b>Regular Play Rules:</b><br/>
+							 &nbsp;&nbsp;&nbsp;&nbsp;Starting money - $800<br/>
+							 &nbsp;&nbsp;&nbsp;&nbsp;Round time - 1 minute 45 seconds<br/>
+                             &nbsp;&nbsp;&nbsp;&nbsp;Freeze time - 8 seconds till &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quarterfinals, 15 seconds for &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;semis & final.<br/>
+                             &nbsp;&nbsp;&nbsp;&nbsp;c4 timer - 35 seconds<br/>
+                             &nbsp;&nbsp;&nbsp;&nbsp;Buy time - 15 seconds<br/>
+						   </div>
+						   <div id="cs_rule_3" style=" position: absolute;">
+						     <b>Deciding Winner–</b><br/> 
+							 &nbsp;&nbsp;Till Quarterfinals the first team to &nbsp;&nbsp;&nbsp;&nbsp;win 11 rounds (i.e., Race to 11) will 
+                             &nbsp;&nbsp;&nbsp;&nbsp;be declared the winner and in &nbsp;&nbsp;&nbsp;&nbsp;Semifinals and Final the first team &nbsp;&nbsp;&nbsp;&nbsp;to win 16 rounds(i.e., 
+                              Race to 16) &nbsp;&nbsp;&nbsp;&nbsp;will be declared the winner.<br/><br/>
+                             &nbsp;&nbsp; In case of a tie there would be an &nbsp;&nbsp;&nbsp;&nbsp;overtime.
+						   </div>
+						   <div id="cs_rule_4"  style="z-index:9;position: absolute;">
+						    <b>Overtime Rules-</b><br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;Start Money - $5000<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;Total rounds - 6(3 as terrorists and &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 as counter-Terrorists )<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;1st team to win 4 rounds will be &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the winner<br/>
+                                &nbsp;&nbsp;If the scores are still tied after &nbsp;&nbsp;&nbsp;&nbsp;overtime another overtime will be &nbsp;&nbsp;&nbsp;&nbsp;played to determine the 
+                                winner.
+						   </div>
+						   <center>
+						   <div id="cs_rule_nav" style="position: relative; top: 290px; width: 150px; height: 25px; background-color: transparent; visibility:hidden;-webkit-transform:scale(1,1);">
+						     <center>
+							   <span id="cs_rule_nav_1" style="position: relative; font-size: 16px; margin: 10px; cursor: pointer;">1</span>
+							   <span id="cs_rule_nav_2" style="position: relative; font-size: 16px; margin: 10px; cursor: pointer;">2</span>
+							   <span id="cs_rule_nav_3" style="position: relative; font-size: 16px; margin: 10px; cursor: pointer;">3</span>
+							   <span id="cs_rule_nav_4" style="position: relative; font-size: 16px; margin: 10px; cursor: pointer;">4</span>
+							 </center>
+						   </div>
+						   </center>
+						</div>
+						<div id="cs_contact">
+						  <center>
+						   Digvijay Mansingh<br/>
+						   9778011884<br/>
+						   <u>gaming@xtasy1k14.com</u>
+						  </center>
+						</div>
+					 </div>
+					<div id="game_cs_control" style="text-align: center;">
+					 <center>
+					  <div id="about_cs_btn" class="about" style="background-image: url('images/btn-about.png');">
+					    <img id="hover_cs_about_btn" src="images/btn-hover.png"/>
+					  </div>
+					  <div id="rule_cs_btn" class="rule" style="background-image: url('images/btn-rule.png');">
+					    <img id="hover_cs_rule_btn" src="images/btn-hover.png"/>
+					  </div>
+					  <div id="contact_cs_btn" class="contact" style="background-image: url('images/btn-contact.png');">
+					    <img id="hover_cs_contact_btn" src="images/btn-hover.png"/>
+					  </div>
+					 </center>
+					</div>
+					<!----Age Of Emperior-------->
+					<div id="game_aoe">
+					    <div id="about_aoe" style="text-align: center;">
+						 Xtasy Brings The platform, where odisha's top aoe players Play together.<br/>
+						</div>
+						<div id="aoe_rules" style="text-align: left;">
+					       <div id="aoe_rule_1" style=" position: absolute;">
+						     <b style="color: rgb(27,54,54);">Game Settings & Game play : </b><br/>
+                              It is NOT allowed to take the 140 food treasure on Great Plains.<br/>
+                              If you are map-screwed and have for example 1 gold mine or no/too far food, you can resign before 3 minutes and re host the game on the same map.<br/>
+                              If no team wins within 40 minutes, then the team with the better score wins.<br/>
+                           </div>
+						   <div id="aoe_rule_2" style="position: absolute;">
+						     <b>Game version:</b><br/>Age of Empires III - The Asian Dynasties v1.03.(This patch makes the game balanced, both civilisations and maps, to ensure fair games)<br/>
+						   </div>
+						   <div id="aoe_rule_3" style=" position: absolute;">
+						     <b>Civilizations for 2v2: All TWC & TAD civilizations</b><br/>
+							 You can use a specific civilisation combination only once in the tournament. For example, in a match you play French and your partner plays German, then in the next match if you play French again then your partner can’t play German as it would repeat the combination. Similarly if your partner plays German again then you can’t play French.
+                             <br/>You can't play both the same civ in a game, so for example two French is not allowed.<br/> 
+						   </div>
+						   <div id="aoe_rule_4"  style="z-index:9;position: absolute;">
+						    <b style="color: rgb(27,54,54);">Game type:</b> Supremacy<br/>
+                            <b style="color: rgb(27,54,54);">Map:</b> A map from "competitive map" pool. (this pool includes the following maps: great plains, painted desert, mongolia, siberia, araucania, yucatan, borneo, sonora, himalayas, andes)
+                            <br/>Both players agree on a map to play. If they can’t come to an agreement then they will each devote a map from the pool until one map remains. That will be the map for that game.
+						   </div>
+						   <div id="aoe_rule_5"  style="z-index:9;position: absolute;">
+                            <b style="color: rgb(27,54,54);">Game rules:</b> Standard<br/>
+                            <b style="color: rgb(27,54,54);">Starting age:</b> Discovery<br/>
+                            <b style="color: rgb(27,54,54);">Game speed:</b> Medium or Fast if both the teams agree.<br/>
+                            <b style="color: rgb(27,54,54);">Free for all:</b> Optional<br/>
+                            <b style="color: rgb(27,54,54);"></b>Handicap: None<br/>
+                            <b style="color: rgb(27,54,54);">Record game:</b> Yes<br/>
+                            <b style="color: rgb(27,54,54);">Allow cheats:</b> No<br/>
+						   </div>
+						   <center>
+						   <div id="aoe_rule_nav" style="position: relative; top: 290px; width: 190px; height: 25px; background-color: transparent; visibility:hidden;-webkit-transform:scale(1,1);">
+						     <center>
+							   <span id="aoe_rule_nav_1" style="position: relative; font-size: 16px; margin: 10px; cursor: pointer;">1</span>
+							   <span id="aoe_rule_nav_2" style="position: relative; font-size: 16px; margin: 10px; cursor: pointer;">2</span>
+							   <span id="aoe_rule_nav_3" style="position: relative; font-size: 16px; margin: 10px; cursor: pointer;">3</span>
+							   <span id="aoe_rule_nav_4" style="position: relative; font-size: 16px; margin: 10px; cursor: pointer;">4</span>
+							   <span id="aoe_rule_nav_5" style="position: relative; font-size: 16px; margin: 10px; cursor: pointer;">5</span>
+							 </center>
+						   </div>
+						   </center>
+						</div>
+						<div id="aoe_contact">
+						  <center>
+						   Digvijay Mansingh<br/>
+						   9778011884
+						  </center>
+						</div>
+					 </div>
+					<div id="game_aoe_control" style="text-align: center;">
+					 <center>
+					  <div id="about_aoe_btn" class="about" style="background-image: url('images/btn-about.png');">
+					    <img id="hover_aoe_about_btn" src="images/btn-hover.png"/>
+					  </div>
+					  <div id="rule_aoe_btn" class="rule" style="background-image: url('images/btn-rule.png');">
+					    <img id="hover_aoe_rule_btn" src="images/btn-hover.png"/>
+					  </div>
+					  <div id="contact_aoe_btn" class="contact" style="background-image: url('images/btn-contact.png');">
+					    <img id="hover_aoe_contact_btn" src="images/btn-hover.png"/>
+					  </div>
+					 </center>
+					</div>
+					<!-------------------nfs-------------------------->
+					<div id="game_nfs">
+					    <div id="about_nfs" style="text-align: center;">
+						 Xtasy Brings The platform, where odisha's top nfs players Play together.<br/>
+						</div>
+						<div id="nfs_rules" style="text-align: left;">
+					       <div id="nfs_rule_1" style=" position: absolute;">
+						     <b style="color: rgb(27,54,54);">Maximum numbers of players in a race : </b>4<br/>
+                             <b style="color: rgb(27,54,54);">Race Type :</b>Sprint<br/>
+                             <b style="color: rgb(27,54,54);"> Nitrous :</b>ON<br/>
+                             <b style="color: rgb(27,54,54);">Collision detection: </b>OFF<br/>
+							 <b style="color: rgb(27,54,54);">Performance matching:</b>ON<br/>
+                            All the cars present in the game will be available for play; user is allowed to choose any car of his choice.<br/>
+						   </div>
+						</div>
+						<div id="nfs_contact">
+						  <center>
+						   Digvijay Mansingh<br/>
+						   9778011884<br/>
+						   <u>gaming@xtasy2k14.com</u>
+						  </center>
+						</div>
+					 </div>
+					<div id="game_nfs_control" style="text-align: center;">
+					 <center>
+					  <div id="about_nfs_btn" class="about" style="background-image: url('images/btn-about.png');">
+					    <img id="hover_nfs_about_btn" src="images/btn-hover.png"/>
+					  </div>
+					  <div id="rule_nfs_btn" class="rule" style="background-image: url('images/btn-rule.png');">
+					    <img id="hover_nfs_rule_btn" src="images/btn-hover.png"/>
+					  </div>
+					  <div id="contact_nfs_btn" class="contact" style="background-image: url('images/btn-contact.png');">
+					    <img id="hover_nfs_contact_btn" src="images/btn-hover.png"/>
+					  </div>
+					 </center>
+					</div>
+					
+				 <!-----FIFA----->
+					<div id="game_fifa">
+					    <div id="about_fifa" style="text-align: center;">
+						 Xtasy Brings The platform, where Odisha's top AOE players Play together.<br/>
+						</div>
+						<div id="fifa_rules" style="text-align: left;">
+					       <div id="fifa_rule_1" style=" position: absolute;">
+						     <b style="color: rgb(27,54,54);">Game Format:</b> 1 vs. 1 Knockout Tournament<BR/>
+                              The teams and players abilities cannot be modified arbitrarily. <br/>
+							 <b style="color: rgb(27,54,54);">Game Settings:Game Settings:</b><br/> 
+							  <b style="color: rgb(27,54,54);">Half Length:</b> 5 minutes (Semifinals and Final will be 7 minutes of each half)<br/>
+                              <b style="color: rgb(27,54,54);">Game Speed :</b> Fast<br/>
+                              <b style="color: rgb(27,54,54);">Injuries:</b> On<br/>
+                              <b style="color: rgb(27,54,54);">Offside:</b> On<br/>
+                              <b style="color: rgb(27,54,54);">Bookings:</b> On<br/>
+                              <b style="color: rgb(27,54,54);">Subs On Bench:</b> 7<br/>
+                              <b style="color: rgb(27,54,54);">Time/Score Display:</b> ON<br/>
+                              <b style="color: rgb(27,54,54);">Difficulty Level:</b> World Class<br/>
+                           </div>
+						   <div id="fifa_rule_2" style="position: absolute;">
+						     <b style="color: rgb(27,54,54);">Controller Settings:</b><br/>
+                             <b style="color: rgb(27,54,54);">Auto Switching –</b> OFF<br/>
+                             <b style="color: rgb(27,54,54);">Pass Assistance –</b> Assisted<br/>
+                             <b style="color: rgb(27,54,54);">Through Pass Assistance –</b> Assisted<br/>
+                            <b style="color: rgb(27,54,54);">Shot Assistance –</b> Assisted<br/>
+                             <b style="color: rgb(27,54,54);">Cross Assistance –</b> Semi<br/>
+                             <b style="color: rgb(27,54,54);">Lob Pass Assistance -</b> Assisted<br/>
+						   </div>
+						   <div id="fifa_rule_3" style=" position: absolute;">
+						     <b style="color: rgb(27,54,54);">Team selection:</b><br/>
+                              A player may choose a team for once only in the whole tournament.<br/>
+                              All Teams are allowed (except Classic XI and World XI)<br/>
+                              Players must bring their own controllers.<br/>
+						   </div>
+						   <center>
+						   <div id="fifa_rule_nav" style="position: relative; top: 290px; width: 190px; height: 25px; background-color: transparent; visibility:hidden;-webkit-transform:scale(1,1);">
+						     <center>
+							   <span id="fifa_rule_nav_1" style="position: relative; font-size: 16px; margin: 10px; cursor: pointer;">1</span>
+							   <span id="fifa_rule_nav_2" style="position: relative; font-size: 16px; margin: 10px; cursor: pointer;">2</span>
+							   <span id="fifa_rule_nav_3" style="position: relative; font-size: 16px; margin: 10px; cursor: pointer;">3</span>
+							 </center>
+						   </div>
+						   </center>
+						</div>
+						<div id="fifa_contact" style="visibility: hidden;">
+						  <center>
+						   Digvijay Mansingh<br/>
+						   9778011884<br/>
+						   <u>gaming@xtasy2k14.com</u>
+						  </center>
+						</div>
+					 </div>
+					<div id="game_fifa_control" style="text-align: center;">
+					 <center>
+					  <div id="about_fifa_btn" class="about" style="background-image: url('images/btn-about.png');">
+					    <img id="hover_fifa_about_btn" src="images/btn-hover.png"/>
+					  </div>
+					  <div id="rule_fifa_btn" class="rule" style="background-image: url('images/btn-rule.png');">
+					    <img id="hover_fifa_rule_btn" src="images/btn-hover.png"/>
+					  </div>
+					  <div id="contact_fifa_btn" class="contact" style="background-image: url('images/btn-contact.png');">
+					    <img id="hover_fifa_contact_btn" src="images/btn-hover.png"/>
+					  </div>
+					 </center>
+					</div>
+					
+				 </div>
+				 
+				 <!---------------------------------Technical--------------------------->
+				 <div id="tech" class="cat_name">
+				    <img src="images/technical.jpg" id="techbg1" class="eventbg"/>
+					<img src="images/technical.png" id="techtext" class="eventbg" style="opacity: 0.8;"/>
+					<img src="images/backbro.png" class="transback"/>
+					<div id="tech_events_left" class="tech_events">
+					  <div id="tech_left_manual" class="tech_left_circle">Manual Robotics</div>
+					  <div id="tech_left_aqua" class="tech_left_circle">Aqua Robotics</div>
+					  <div id="tech_left_automated" class="tech_left_circle">Automated Robotics</div>
+					  <div id="tech_left_code" class="tech_left_circle">Code Busters</div>
+					  <div id="tech_left_web" class="tech_left_circle">Web Weaears</div>
+					  <div id="tech_left_dynamic" class="tech_left_circle">My Site</div>
+					  <div id="tech_left_digital" class="tech_left_circle">Digital Drawing</div>
+					</div>
+					<div id="tech_events_right" class="tech_events">
+					  <div id="tech_right_paper" class="tech_right_circle">PPT</div>
+					  <div id="tech_right_campus" class="tech_right_circle">Campus Challange</div>
+					  <div id="tech_right_cad" class="tech_right_circle">CAD Designing</div>
+					  <div id="tech_right_junkey" class="tech_right_circle">Junkeyard wars</div>
+					  <div id="tech_right_auto" class="tech_right_circle">Auto Quiz</div>
+					  <div id="tech_right_qtech" class="tech_right_circle">Q Technologico</div>
+					</div>
+					<div id="tech_close" class="close" style="background-image:url('images/close-buttonwhite.png');">
+					  <div id="red_close" style="background-image:url('images/close-buttonred.png');"></div>
+					</div>
+				 </div>
+				 <!-------------------------------BUSSINESS---------------------------->
+				 <div id="buss" class="cat_name">
+				    <img src="images/business.jpg" id="bussbg1" class="eventbg"/>
+					<img src="images/business.png" id="busstext" class="eventbg" style="opacity: 0.8;"/>
+					<img src="images/backbro.png" class="transback"/>
+					<div id="buss_events_left" class="buss_events">
+					  <div id="buss_left_ad" class="buss_left_circle">Ad Mad</div>
+					  <div id="buss_left_bplan" class="buss_left_circle">B-Plan</div>
+					</div>
+					<div id="buss_events_right" class="buss_events">
+					  <div id="buss_right_snap" class="buss_right_circle">Snap The Deal</div>
+					  <div id="buss_right_kar" class="buss_right_circle">Karobar</div>
+					</div>
+					<div id="buss_close" class="close" style="background-image:url('images/close-buttonwhite.png');">
+					  <div id="red_close" style="background-image:url('images/close-buttonred.png');"></div>
+					</div>
+				 </div>
+				<!----------------------------FUN-------------------------------------->
+                 <div id="fun" class="cat_name">
+				   <img src="images/fun.jpg" id="funbg1" class="eventbg"/>
+					<img src="images/fun.png" id="funtext" class="eventbg" style="opacity: 0.8;"/>
+					<img src="images/backbro.png" class="transback"/>
+					<div id="fun_events_left" class="buss_events">
+					  <div id="fun_left_ad" class="buss_left_circle">Ad Mad</div>
+					  <div id="fun_left_bplan" class="buss_left_circle">B-Plan</div>
+					</div>
+					<div id="fun_events_right" class="buss_events">
+					  <div id="fun_right_snap" class="buss_right_circle">Snap The Deal</div>
+					  <div id="fun_right_kar" class="buss_right_circle">Karobar</div>
+					</div>
+					<div id="fun_close" class="close" style="background-image:url('images/close-buttonwhite.png');">
+					  <div id="red_close" style="background-image:url('images/close-buttonred.png');"></div>
+					</div>
+                 </div>
+                <!----------------------------dramatics--------------------------------->
+                <div id="drama" class="cat_name">
+				  <img src="images/dramatics.jpg" id="dramabg1" class="eventbg"/>
+					<img src="images/dramatics.png" id="dramatext" class="eventbg" style="opacity: 0.8;"/>
+					<img src="images/backbro.png" class="transback"/>
+					<div id="drama_events_left" class="drama_events">
+					  <div id="drama_left_ad" class="drama_left_circle">Ad Mad</div>
+					  <div id="drama_left_bplan" class="drama_left_circle">B-Plan</div>
+					</div>
+					<div id="drama_events_right" class="drama_events">
+					  <div id="drama_right_snap" class="drama_right_circle">Snap The Deal</div>
+					  <div id="drama_right_kar" class="drama_right_circle">Karobar</div>
+					</div>
+					<div id="drama_close" class="close" style="background-image:url('images/close-buttonwhite.png');">
+					  <div id="red_close" style="background-image:url('images/close-buttonred.png');"></div>
+					</div>
+                </div>				
+			  </center>
+			 <div id="layer"></div>
+			</div>
+	     </div>
+	  </center>
+<!------------------------------------------------------------------FOOTER--------------------------------------------------------------------------->
+      <div id="foot">
+		
+	  </div>
+	</div>
+	<audio id="open" controls="controls" style="visibility: hidden;">
+       <source src="sound/open.wav" type="audio/wav">
+    </audio>
+	<audio id="close" controls="controls" style="visibility: hidden;">
+       <source src="sound/close.wav" type="audio/wav">
+    </audio>
+  </body>
+</html>

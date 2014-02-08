@@ -1,0 +1,1175 @@
+*
+{
+ border: 0px;
+ margin: 0px;
+ padding: 0px;
+}
+@font-face
+{
+font-family: perfectdark;
+ src: url("Perfect Dark (BRK).ttf");
+}
+@font-face
+{
+font-family: facebook;
+ src: url("FACEBOLF.otf");
+}
+@font-face
+{
+font-family: prime;
+ src: url("Prime Light.otf");
+}
+body
+{
+ background-size: 100% ,100%;
+}
+div#window
+{
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ width: 100%;
+ height: 100%;
+ background-size: 100% 100%;
+ visibility: hidden;
+ overflow: hidden;
+}
+/*-----------------------------------------------HEAD--------------------------------------------------------*/
+div#window div#heading
+{
+ position: fixed;
+ top: 0px;
+ left: 0px;
+ width: 100%;
+ height: 50px;
+}
+div#window div#heading div#logo
+{
+ position: relative;
+ top: 30px;
+ left: 20px;
+ width: 250px;
+ height: 100px;
+}
+div#window div#heading div#nav
+{
+ position: fixed;
+ top: 30px;
+ right: -70px;
+ width: 200px;
+ height: 50px;
+ z-index:8;
+}
+div#window div#heading div#nav ul
+{
+ list-style: none;
+}
+div#window div#heading div#nav ul li
+{
+ display: block;
+ margin-top: 25px;
+}
+div#window div#heading div#nav ul li:nth-child(1)
+{
+ display: block;
+ margin-top: 0px;
+}
+div#window div#heading div#nav  ul li a div.links
+{
+ width: 100px;
+ height: 30px;
+ opacity: 1;
+ z-index:3;
+}
+div#window div#heading div#nav a div.links img.nav_button
+{
+ position: relative;
+ width: 100px;
+ height: 30px;
+ opacity: 1;
+ z-index:7;
+}
+img.nav_back
+{
+ position: absolute;
+ width: 100px;
+ height: 30px;
+ opacity: 0.3;
+ z-index:6;
+}
+div#window div#heading div#nav a div.links:hover  img.nav_back
+{
+ opacity: 0.5;
+}
+/*-----------------------------------------------------------------MIDDLE---------------------------------------------------------------------*/
+div#window center div#content
+{
+ position: relative;
+ top: 0px;
+ left: 0px;
+ width: 1000px;
+ height: 600px;
+ background-color: transparent;
+ z-index: 1;
+}
+div#window center div#content div#event_container
+{
+ position: absolute;
+ bottom: 0px;
+ width: 100%;
+ height: 110px;
+ background-color: transparent;
+}
+div#window center div#content div#event_container div.cat_name
+{
+ position: absolute;
+ top:0px;
+ width: 100px;
+ height: 100px;
+ background-color: white;
+ cursor: pointer;
+ border-radius: 100px;
+ -webkit-animation-timing-function: lenear;
+ -webkit-animation-duration: 1s;
+ -webkit-animation-iteration-count: 1;
+ opacity: 0.9;
+}
+div.cat_name:hover
+{
+  box-shadow: 0.1px 0.1px 150px red;
+}
+/*---------------------------------------------------------art and media----------------------------------------*/
+div#window center div#content div#event_container div#art
+{
+  -webkit-animation-delay: 0s;
+  left: 0px;
+}
+div#window center div#content div#event_container img.eventbg
+{
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ width: 100px;
+ height: 100px;
+ border-radius: 100px;
+}
+div.eventbg:hover  div.cat_name
+{
+box-shadow: 0.1px 0.1px 11px red;
+ opacity:1;
+}
+div#window center div#content div#event_container div#art img#arttext
+{
+ -webkit-transform: scale(1.1,1.1);
+ box-shadow:0.1px 0.1px 36px white ;
+}
+div#window center div#content div#event_container div#cult img#culttext
+{
+ -webkit-transform: scale(1.1,1.1);
+ box-shadow:0.1px 0.1px 36px white ;
+}
+div#window center div#content div#event_container div#lit img#littext
+{
+ -webkit-transform: scale(1.1,1.1);
+ box-shadow:0.1px 0.1px 36px white ;
+}
+div#window center div#content div#event_container div#game img#gametext
+{
+ -webkit-transform: scale(1.1,1.1);
+ box-shadow:0.1px 0.1px 36px white ;
+}
+div#window center div#content div#event_container div#tech img#techtext
+{
+ -webkit-transform: scale(1.1,1.1);
+ box-shadow:0.1px 0.1px 36px white ;
+}
+div#window center div#content div#event_container div#fun img#funtext
+{
+ -webkit-transform: scale(1.1,1.1);
+ box-shadow:0.1px 0.1px 36px white ;
+}
+div#window center div#content div#event_container div#drama  img#dramatext
+{
+ -webkit-transform: scale(1.1,1.1);
+ box-shadow:0.1px 0.1px 36px white ;
+}
+
+div#window center div#content div#event_container div#art img#arttext:hover
+{
+ -webkit-transform: scale(1.1,1.1);
+ box-shadow:0.1px 0.1px 36px red ;
+}
+div#window center div#content div#event_container div#cult img#culttext:hover
+{
+ -webkit-transform: scale(1.1,1.1);
+ box-shadow:0.1px 0.1px 36px red ;
+}
+div#window center div#content div#event_container div#lit img#littext:hover
+{
+ -webkit-transform: scale(1.1,1.1);
+ box-shadow:0.1px 0.1px 36px red ;
+}
+div#window center div#content div#event_container div#game img#gametext:hover
+{
+ -webkit-transform: scale(1.1,1.1);
+ box-shadow:0.1px 0.1px 36px red ;
+}
+div#window center div#content div#event_container div#tech img#techtext:hover
+{
+ -webkit-transform: scale(1.1,1.1);
+ box-shadow:0.1px 0.1px 36px red ;
+}
+div#window center div#content div#event_container div#fun img#funtext:hover
+{
+ -webkit-transform: scale(1.1,1.1);
+ box-shadow:0.1px 0.1px 36px red ;
+}
+div#window center div#content div#event_container div#drama  img#dramatext:hover
+{
+ -webkit-transform: scale(1.1,1.1);
+ box-shadow:0.1px 0.1px 36px red ;
+}
+
+div#window center div#content div#event_container span
+{
+ position: absolute;
+ left: 30px;
+}
+div#window center div#content div#event_container div#cult
+{
+  -webkit-animation-delay: 2s;
+  left: 140px;
+}
+div#window center div#content div#event_container div#lit
+{
+  -webkit-animation-delay: 4s;
+  left: 280px;
+}
+div#window center div#content div#event_container div#game
+{
+  -webkit-animation-delay: 6s;
+  left: 420px;
+}
+div#window center div#content div#event_container div#tech
+{
+  -webkit-animation-delay: 8s;
+  left: 560px;
+}
+div#window center div#content div#event_container div#buss
+{
+  -webkit-animation-delay: 10s;
+  left: 700px;
+  visibility: hidden;
+}
+div#window center div#content div#event_container div#fun
+{
+  -webkit-animation-delay: 10s;
+  left: 700px;
+}
+div#window center div#content div#event_container div#drama
+{
+  -webkit-animation-delay: 10s;
+  left: 840px;
+}
+/*------------------------------------------Game events-------------------------------------------------*/
+div.game_events
+{
+ position: absolute;
+ top: opx;
+ width: 150px;
+ height: 500px;
+ background-color: transparent;
+ visibility: hidden;
+}
+div#game_events_left
+{
+ left:100px;
+}
+div#game_events_right
+{
+ right:100px;
+}
+div.game_left_circle
+{
+ position: relative;
+ width: 150px;
+ height: 150px;
+ border-radius: 200px;
+ background-size: 150px 150px;
+ background-position: center;
+box-sizing: content-box;
+
+}
+@-webkit-keyframes glow1
+{
+ 0% { box-shadow: 0.1px 0.1px 150px red;}
+ 50% { box-shadow: 0.1px 0.1px 0px red;}
+ 100% { box-shadow: 0.1px 0.1px 150px red;}
+}
+div#game_left_cs
+{
+ top:50px;
+ left: 30px;
+}
+div#game_left_aoe
+{
+ top:60px;
+ left: 0px;
+}
+div.game_right_circle
+{
+ position: relative;
+ width: 150px;
+ height: 150px;
+ border-radius: 150px;
+ background-size: 150px 150px;
+}
+div#game_right_nfs
+{
+ top:50px;
+ left: -30px;
+}
+div#game_right_fifa
+{
+ top:60px;
+ left: 0px;
+}
+div#about_game,div#game_cs
+{
+ position: absolute;
+ top: 110px;
+ left: 70px;
+ width: 280px;
+ height:290px;
+ background-color: transparent;
+ visibility: hidden;
+ text-align: center;
+ font-family: prime;
+ -webkit-transform: scale(5,5);
+ -webkit-transition: -webkit-transform 1s;
+}
+div#game_cs div#cs_rules, div#cs_contact, div#about_cs
+{
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ width: 280px;
+ height: 290px;
+ background-color: transparent;
+ visibility: hidden;
+ -webkit-transform: scale(5,5);
+ -webkit-transition: -webkit-transform 1s;
+}
+div#cs_rules div#cs_rule_1
+{
+ -webkit-transform: scale(5,5);
+ -webkit-transition: -webkit-transform 1s;
+}
+div#cs_rules
+{
+ visibility: hidden;
+}
+div#cs_rules div
+ {
+  visibility: hidden;
+ }
+div#game_cs div b
+{
+ color: rgb(40,40,40);
+}
+div#game_cs_control
+{
+ position: absolute;
+ top: 190px;
+ right: 30px;
+ width: 103px;
+ height: 120px;
+ background-color: transparent;
+ visibility: hidden;
+}
+div#game_cs_control div
+{
+ position: relative;
+ width: 120px;
+ height:30px;
+ left: -7px;
+ cursor: pointer;
+}
+div#game_cs_control div:nth-child(1)
+{
+ top: 4px;
+}
+div#game_cs_control div:nth-child(2)
+{
+ top: 15px;
+}
+div#game_cs_control div:nth-child(3)
+{
+ top: 27px;
+}
+div#game_cs_control div img
+{
+ opacity: 0.8;
+ visibility: hidden;
+}
+div#about_cs_btn:hover  img#hover_cs_about_btn
+{
+ visibility: visible;
+}
+div#rule_cs_btn:hover  img#hover_cs_rule_btn
+{
+ visibility: visible;
+}
+div#contact_cs_btn:hover  img#hover_cs_contact_btn
+{
+ visibility: visible;
+}
+div#cs_rule_nav span
+{
+  position: relative;
+  color: rgb(40,40,40);
+  font-size: 10px;
+}
+div#cs_rule_nav
+{
+ -webkit-transform: scale(1,1);
+ visibility: visible;
+}
+span#cs_rule_nav_1, span#cs_rule_nav_2, span#cs_rule_nav_3, span#cs_rule_nav_4
+{
+  color: red;
+  zoom: 1.01;
+}
+/*--------AOE---------*/
+div#game_aoe
+{
+ position: absolute;
+ top: 110px;
+ left: 70px;
+ width: 280px;
+ height:290px;
+ background-color: transparent;
+ visibility: hidden;
+ text-align: center;
+ font-family: prime;
+ -webkit-transform: scale(5,5);
+ -webkit-transition: -webkit-transform 1s;
+}
+div#game_aoe div#aoe_rules, div#aoe_contact, div#about_aoe
+{
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ width: 280px;
+ height: 290px;
+ background-color: transparent;
+ visibility: hidden;
+ -webkit-transform: scale(5,5);
+ -webkit-transition: -webkit-transform 1s;
+}
+div#aoe_rules div#aoe_rule_1
+{
+ -webkit-transform: scale(5,5);
+ -webkit-transition: -webkit-transform 1s;
+}
+div#aoe_rules
+{
+ visibility: hidden;
+}
+div#aoe_rules div
+ {
+  visibility: hidden;
+ }
+div#game_aoe div b
+{
+ color: rgb(40,40,40);
+}
+div#game_aoe_control
+{
+ position: absolute;
+ top: 190px;
+ right: 30px;
+ width: 103px;
+ height: 120px;
+ background-color: transparent;
+ visibility: hidden;
+}
+div#game_aoe_control div
+{
+ position: relative;
+ width: 120px;
+ height:30px;
+ left: -7px;
+ cursor: pointer;
+}
+div#game_aoe_control div:nth-child(1)
+{
+ top: 4px;
+}
+div#game_aoe_control div:nth-child(2)
+{
+ top: 15px;
+}
+div#game_aoe_control div:nth-child(3)
+{
+ top: 27px;
+}
+div#game_aoe_control div img
+{
+ opacity: 0.5;
+ visibility: hidden;
+}
+div#about_aoe_btn:hover  img#hover_aoe_about_btn
+{
+ visibility: visible;
+}
+div#rule_aoe_btn:hover  img#hover_aoe_rule_btn
+{
+ visibility: visible;
+}
+div#contact_aoe_btn:hover  img#hover_aoe_contact_btn
+{
+ visibility: visible;
+}
+div#aoe_rule_nav span
+{
+  position: relative;
+  color: rgb(40,40,40);
+  font-size: 10px;
+}
+div#aoe_rule_nav
+{
+ -webkit-transform: scale(1,1);
+ visibility: visible;
+}
+span#aoe_rule_nav_1, span#aoe_rule_nav_2, span#aoe_rule_nav_3, span#aoe_rule_nav_4
+{
+  color: red;
+  zoom: 1.01;
+}
+/*nfs*/
+div#game_nfs
+{
+ position: absolute;
+ top: 110px;
+ left: 70px;
+ width: 280px;
+ height:290px;
+ background-color: transparent;
+ visibility: hidden;
+ text-align: center;
+ font-family: prime;
+ -webkit-transform: scale(5,5);
+ -webkit-transition: -webkit-transform 1s;
+}
+div#game_nfs div#nfs_rules, div#nfs_contact, div#about_nfs
+{
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ width: 280px;
+ height: 290px;
+ background-color: transparent;
+ visibility: hidden;
+ -webkit-transform: scale(5,5);
+ -webkit-transition: -webkit-transform 1s;
+}
+div#nfs_rules div#nfs_rule_1
+{
+ -webkit-transform: scale(5,5);
+ -webkit-transition: -webkit-transform 1s;
+}
+div#nfs_rules
+{
+ visibility: hidden;
+}
+div#nfs_rules div
+ {
+  visibility: hidden;
+ }
+div#game_nfs div b
+{
+ color: rgb(40,40,40);
+}
+div#game_nfs_control
+{
+ position: absolute;
+ top: 190px;
+ right: 30px;
+ width: 103px;
+ height: 120px;
+ background-color: transparent;
+ visibility: hidden;
+}
+div#game_nfs_control div
+{
+ position: relative;
+ width: 120px;
+ height:30px;
+ left: -7px;
+ cursor: pointer;
+}
+div#game_nfs_control div:nth-child(1)
+{
+ top: 4px;
+}
+div#game_nfs_control div:nth-child(2)
+{
+ top: 15px;
+}
+div#game_nfs_control div:nth-child(3)
+{
+ top: 27px;
+}
+div#game_nfs_control div img
+{
+ opacity: 0.5;
+ visibility: hidden;
+}
+div#about_nfs_btn:hover  img#hover_nfs_about_btn
+{
+ visibility: visible;
+}
+div#rule_nfs_btn:hover  img#hover_nfs_rule_btn
+{
+ visibility: visible;
+}
+div#contact_nfs_btn:hover  img#hover_nfs_contact_btn
+{
+ visibility: visible;
+}
+div#nfs_rule_nav span
+{
+  position: relative;
+  color: rgb(40,40,40);
+  font-size: 10px;
+}
+div#nfs_rule_nav
+{
+ -webkit-transform: scale(1,1);
+ visibility: visible;
+}
+span#nfs_rule_nav_1, span#nfs_rule_nav_2, span#nfs_rule_nav_3, span#nfs_rule_nav_4
+{
+  color: red;
+  zoom: 1.01;
+}
+/*-------------------------FIFA 11----------------------------*/
+div#game_fifa
+{
+ position: absolute;
+ top: 110px;
+ left: 70px;
+ width: 280px;
+ height:290px;
+ background-color: transparent;
+ visibility: hidden;
+ text-align: center;
+ font-family: prime;
+ -webkit-transform: scale(5,5);
+ -webkit-transition: -webkit-transform 1s;
+}
+ div#fifa_rules, div#fifa_contact, div#about_fifa
+{
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ width: 280px;
+ height: 290px;
+ background-color: transparent;
+ visibility: hidden;
+ -webkit-transform: scale(5,5);
+ -webkit-transition: -webkit-transform 1s;
+}
+div#fifa_rules div#fifa_rule_1
+{
+ -webkit-transform: scale(5,5);
+ -webkit-transition: -webkit-transform 1s;
+}
+div#fifa_rules
+{
+ visibility: hidden;
+}
+div#fifa_rules div
+ {
+  visibility: hidden;
+ }
+div#game_fifa div b
+{
+ color: rgb(40,40,40);
+}
+div#game_fifa_control
+{
+ position: absolute;
+ top: 190px;
+ right: 30px;
+ width: 103px;
+ height: 120px;
+ background-color: transparent;
+ visibility: hidden;
+}
+div#game_fifa_control div
+{
+ position: relative;
+ width: 120px;
+ height:30px;
+ left: -7px;
+ cursor: pointer;
+}
+div#game_fifa_control div:nth-child(1)
+{
+ top: 4px;
+}
+div#game_fifa_control div:nth-child(2)
+{
+ top: 15px;
+}
+div#game_fifa_control div:nth-child(3)
+{
+ top: 27px;
+}
+div#game_fifa_control div img
+{
+ opacity: 0.5;
+ visibility: hidden;
+}
+div#about_nfs_btn:hover  img#hover_fifa_about_btn
+{
+ visibility: visible;
+}
+div#rule_nfs_btn:hover  img#hover_fifa_rule_btn
+{
+ visibility: visible;
+}
+div#contact_nfs_btn:hover  img#hover_fifa_contact_btn
+{
+ visibility: visible;
+}
+div#fifa_rule_nav span
+{
+  position: relative;
+  color: rgb(40,40,40);
+  font-size: 10px;
+}
+div#fifa_rule_nav
+{
+ -webkit-transform: scale(1,1);
+ visibility: visible;
+}
+span#fifa_rule_nav_1, span#fifa_rule_nav_2, span#fifa_rule_nav_3, span#fifa_rule_nav_4
+{
+  color: red;
+  zoom: 1.01;
+}
+/*------------------Litrary----*/
+div.lit_events
+{
+ position: absolute;
+ top: opx;
+ width: 150px;
+ height: 500px;
+ background-color: transparent;
+ visibility: hidden;
+}
+div#lit_events_left
+{
+ left:100px;
+}
+div#lit_events_right
+{
+ right:100px;
+}
+div.lit_left_circle
+{
+ position: relative;
+ width: 100px;
+ height: 100px;
+ border-radius: 100px;
+ background-color: aqua;
+}
+div#lit_left_word
+{
+ top:50px;
+ left: 60px;
+}
+div#lit_left_ala
+{
+ top:60px;
+ left: 25px;
+}
+div.lit_right_circle
+{
+ position: relative;
+ width: 100px;
+ height: 100px;
+ border-radius: 100px;
+ background-color: aqua;
+}
+div#lit_right_wart
+{
+ top:50px;
+ left: -60px;
+}
+div#lit_right_broad
+{
+ top:60px;
+ left: -25px;
+}
+/*-------------------------------Cultural-----------------------*/
+div.cult_events
+{
+ position: absolute;
+ top: opx;
+ width: 150px;
+ height: 500px;
+ background-color: transparent;
+ visibility: hidden;
+}
+div#cult_events_left
+{
+ left:100px;
+}
+div#cult_events_right
+{
+ right:100px;
+}
+div.cult_left_circle
+{
+ position: relative;
+ width: 100px;
+ height: 100px;
+ border-radius: 100px;
+ background-color: aqua;
+}
+div#cult_left_solo
+{
+ top:50px;
+ left: 60px;
+}
+div#cult_left_duet
+{
+ top:60px;
+ left: 25px;
+}
+div#cult_left_group
+{
+ top:80px;
+ left: 35px;
+}
+div.cult_right_circle
+{
+ position: relative;
+ width: 100px;
+ height: 100px;
+ border-radius: 100px;
+ background-color: aqua;
+}
+div#cult_right_fashion
+{
+ top:50px;
+ left: -60px;
+}
+div#cult_right_sing
+{
+ top:60px;
+ left: -25px;
+}
+div#cult_right_band
+{
+ top:80px;
+ left: -35px;
+}
+img.transback
+{
+ position: absolute;
+ top:0px;
+ left: 0px;
+ width: 500px;
+ height: 500px;
+ border-radius: 500px;
+ visibility: hidden;
+}
+div#cult_about
+{
+ position: absolute;
+ top: 90px;
+ left: 80px;
+ width: 270px;
+ height: 320px;
+ background-color:red;
+ visibility: hidden;
+}
+/*----------------------------------------TECHNICAL------------------------------------*/
+div.tech_events
+{
+ position: absolute;
+ top: opx;
+ width: 150px;
+ height: 500px;
+ background-color: transparent;
+ visibility: hidden;
+}
+div#tech_events_left
+{
+ left:100px;
+}
+div#tech_events_right
+{
+ right:100px;
+}
+div.tech_left_circle
+{
+ position: relative;
+ width: 80px;
+ height: 80px;
+ border-radius: 100px;
+ background-color: aqua;
+}
+div#tech_left_manual
+{
+ top:5px;
+ left: 110px;
+}
+div#tech_left_aqua
+{
+ top:5px;
+ left: 55px;
+}
+div#tech_left_automated
+{
+ top:10px;
+ left: 30px;
+}
+div#tech_left_code
+{
+ top:15px;
+ left: 30px;
+}
+div#tech_left_web
+{
+ top:15px;
+ left: 55px;
+}
+div#tech_left_dynamic
+{
+ top:15px;
+ left: 110px;
+}
+div#tech_left_digital
+{
+ top:0px;
+ left: 180px;
+}
+div.tech_right_circle
+{
+ position: relative;
+ width: 80px;
+ height: 80px;
+ border-radius: 100px;
+ background-color: aqua;
+}
+div#tech_right_paper
+{
+ top:5px;
+ left: -110px;
+}
+div#tech_right_campus
+{
+ top:5px;
+ left: -55px;
+}
+div#tech_right_cad
+{
+ top:10px;
+ left: -30px;
+}
+div#tech_right_junkey
+{
+ top:15px;
+ left: -30px;
+}
+div#tech_right_auto
+{
+ top:15px;
+ left: -55px;
+}
+div#tech_right_qtech
+{
+ top:15px;
+ left: -110px;
+}
+img.transback
+{
+ position: absolute;
+ top:0px;
+ left: 0px;
+ width: 500px;
+ height: 500px;
+ border-radius: 500px;
+ visibility: hidden;
+}
+div.close
+{
+ position: relative;
+ top: 53px;
+ left: 137px;
+ width: 45px;
+ height:45px;
+ border-radius: 60px;
+ background-size: 45px 45px;
+ background-color: transparent;
+ z-index:10;
+ opacity: 0.8;
+ visibility: hidden;
+}
+div.close div#red_close
+{
+ position: relative;
+ top: 3px;
+ width: 39px;
+ height: 39px;
+ border-radius: 35px;
+ background-color: transparent;
+ z-index:9;
+ opacity:0.4;
+}
+div.close:hover
+{
+ 
+ box-shadow: 0.1px 0.1px 110px red;
+}
+div.close:hover div#red_close
+{
+ opacity: 0.8;
+}
+/*-------------------------------------Business----------------------------*/
+div.buss_events
+{
+ position: absolute;
+ top: opx;
+ width: 150px;
+ height: 500px;
+ background-color: transparent;
+ visibility: hidden;
+}
+div#buss_events_left
+{
+ left:100px;
+}
+div#buss_events_right
+{
+ right:100px;
+}
+div.buss_left_circle
+{
+ position: relative;
+ width: 100px;
+ height: 100px;
+ border-radius: 100px;
+ background-color: aqua;
+}
+div#buss_left_ad
+{
+ top:50px;
+ left: 60px;
+}
+div#buss_left_bplan
+{
+ top:60px;
+ left: 25px;
+}
+div.buss_right_circle
+{
+ position: relative;
+ width: 100px;
+ height: 100px;
+ border-radius: 100px;
+ background-color: aqua;
+}
+div#buss_right_snap
+{
+ top:50px;
+ left: -60px;
+}
+div#buss_right_kar
+{
+ top:60px;
+ left: -25px;
+}
+div#layer
+{
+ position: absolute;
+ top: 150px;
+ left:0px;
+ width: 100%;
+ height: 160%;
+ background-color: transparent;
+ visibility:visible;
+}
+/*-------------------------------------------------------------FOOT---------------------------------------------------------------------*/
+div#window div#foot
+{
+ position: fixed;
+ bottom: 0px;
+ left: 0px;
+ width: 100%;
+ height: 80px;
+ background-color: transparent;
+ 
+}
+@-webkit-keyframes logorotate
+{
+ 0% {-webkit-transform: rotateY(0deg);}
+ 100% {-webkit-transform: rotateY(360deg);}
+}
+div#window div#foot div#contactsec
+{
+ position: absolute;
+ top:0px;
+ right: 10px;
+ background-color: transparent;
+ box-shadow:inset 0.1px 0.1px 100px black;
+ font-family: verdana;
+ font-size: 12px;
+ color: white;
+ width:200px;
+ height: 200px;
+}
+div#socialmedia
+{
+ position: relative;
+ top: 0px;
+ left: 50px;
+ width: 500px;
+ height: 100px;
+ background-color: transparent;
+}
+div#socialmedia div
+{
+ position: absolute;
+ top: 0px;
+ width: 60px;
+ height: 60px;
+ box-sizing: border-box;
+ border-radius: 100px;
+ border: white 8px solid;
+ opacity: 1;
+ box-shadow: 0.1px 0.1px 11px gray;
+}
+div#socialmedia div span
+{
+ position: relative;
+ top:px;
+ left: 0px;
+ font-family: facebook;
+ font-size: 40px;
+ color: white;
+ -webkit-transition: -webkit-transform 2s;
+}
+div#socialmedia div:hover
+{
+ box-shadow:inset 0.1px 0.1px 20px black;
+  -webkit-transform: scale(1.1,1.1);
+  border: white 5px solid;
+  opacity: 0.7
+}
